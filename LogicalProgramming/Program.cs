@@ -7,7 +7,7 @@ namespace LogicalProgramming
         public void Viewprogram()
         {
             int choice;
-            const int FIBONACCI_SERIES = 1, PERFECT_NUMBER = 2, PRIME_NUMBER = 3, REVERSE_NUMBER = 4, TEMPERATURE_CONVERSION = 5, DECIMAL_BINARY = 6, MONTHLY_PAYMENT = 7, DAY_WEEK = 8;
+            const int FIBONACCI_SERIES = 1, PERFECT_NUMBER = 2, PRIME_NUMBER = 3, REVERSE_NUMBER = 4, TEMPERATURE_CONVERSION = 5, DECIMAL_BINARY = 6, MONTHLY_PAYMENT = 7, DAY_WEEK = 8, WENDING_MACHINE = 9;
             Console.WriteLine("Press 1 : Fibonacci Series Program");
             Console.WriteLine("Press 2 : Perfect Number Program");
             Console.WriteLine("Press 3 : Prime Number Program");
@@ -16,6 +16,7 @@ namespace LogicalProgramming
             Console.WriteLine("Press 6 : Decimal to Binary Program");
             Console.WriteLine("Press 7 : Monthly Payment Program");
             Console.WriteLine("Press 8 : Day of Week Program");
+            Console.WriteLine("Press 9 : Money Wending Machine Program");
             Console.WriteLine("Enter your choice");
             choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -51,6 +52,10 @@ namespace LogicalProgramming
                 case DAY_WEEK:
                     DayWeek day_week = new DayWeek();
                     day_week.Week();
+                    break;
+                case WENDING_MACHINE:
+                    WendingMachine wending_machine = new WendingMachine();
+                    wending_machine.Money();
                     break;
             }
             Console.WriteLine("\nPress Y to run other programs or else press N to exit");
